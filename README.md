@@ -1,1 +1,1 @@
-# intro-to-programming-concepts
+# Introduction to Programming Concepts
