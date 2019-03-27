@@ -13,3 +13,15 @@ Goal 3: Use ConvertFrom-Json to convert the raw JSON data into a PowerShell nati
 Bonus: Display the contents of key6.
 
 #>
+
+# Goal 1
+$File = 'lesson04.json'
+
+# Goal 2
+$Content = Get-Content -Raw -Path $File
+
+# Goal 3
+$ContentNative = ConvertFrom-Json -InputObject $Content
+
+# Bonus
+Write-Output $ContentNative.key6

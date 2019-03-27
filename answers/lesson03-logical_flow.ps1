@@ -12,3 +12,17 @@ Goal 3: Use a the "If" condition to check if the value of $FolderTest is $True. 
 Bonus: Use the $Folder variable in your fun and sad messages.
 
 #>
+
+# Goal 1
+[String]$Folder = 'C:\Windows\System32'
+
+# Goal 2
+[Bool]$FolderTest = Test-Path $Folder
+
+# Goal 3
+If ($FolderTest -eq $True) {
+    Write-Output "I have validated that $Folder exists!"
+}
+Else {
+    Write-Output "Oh no, $Folder does not exist! Wait - why does your computer even work right now?"
+}
