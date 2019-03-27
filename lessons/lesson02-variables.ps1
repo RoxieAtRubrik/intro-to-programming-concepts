@@ -4,10 +4,11 @@
 #  Bonus: Retrieve only the first 10 results using Select-Object
 
 # Goal 1
-$ProcessList = Get-Process
+[Array]$ProcessList = Get-Process
 
 # Goal 2
-$ProcessList | Sort-Object -Property Id
+[Array]$ProcessList | Sort-Object -Property Id
 
 # Bonus
-$ProcessList | Sort-Object -Property Id | Select-Object -First 10
+[Int]$Result = 10
+[Array]$ProcessList | Sort-Object -Property Id | Select-Object -First $Result
